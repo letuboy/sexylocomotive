@@ -35,7 +35,7 @@ Locomotive.configure do |config|
   #   - from this file, see the example below and uncomment it if needed
   config.heroku = {
      :login      => 'letuboy@gmail.com',
-     :password   => ''
+     :password   => 'mphamy00'
   }
 
   # Locomotive uses the DelayedJob gem for the site import module.
