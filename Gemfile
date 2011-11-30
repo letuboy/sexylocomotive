@@ -36,8 +36,8 @@ gem 'actionmailer-with-request', :require => 'actionmailer_with_request'
 gem 'heroku', '1.19.1'
 gem 'httparty', '0.7.8'
 gem 'RedCloth', '4.2.8'
-gem 'delayed_job', '2.1.4'
-gem 'delayed_job_mongoid', '1.0.2'
+gem 'delayed_job', '3.0.0.pre4'
+gem 'delayed_job_mongoid', '1.0.6'
 gem 'rubyzip'
 gem 'locomotive_jammit-s3', :require => 'jammit-s3'
 gem 'SystemTimer', :platforms => :ruby_18
@@ -58,7 +58,7 @@ end
 group :test, :development do
   gem 'linecache', '0.43', :platforms => :mri_18
   gem 'ruby-debug', :platforms => :mri_18
-  gem 'ruby-debug19', :platforms => :mri_19, :require => 'ruby-debug'
+  gem 'ruby-debug19', :platforms => :mri_19
 
   gem 'bushido_stub', '0.0.3'
 
