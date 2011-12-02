@@ -50,12 +50,18 @@ Rails.application.routes.draw do
     resource :import, :only => [:new, :show, :create], :controller => 'import'
 
     resource :export, :only => [:new], :controller => 'export'
+		
+    resources :photo_galleries do
+      get :get_path, :on => :collection
+    end
 
     # installation guide
     match '/installation' => 'installation#show', :defaults => { :step => 1 }, :as => :installation
     match '/installation/:step' => 'installation#show', :as => :installation_step
 
   end
+
+  resources :photo_galleries
 
   # sitemap
   match '/sitemap.xml' => 'admin/sitemaps#show', :format => 'xml'

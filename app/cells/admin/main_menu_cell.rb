@@ -4,6 +4,7 @@ class Admin::MainMenuCell < ::Admin::MenuCell
 
   def build_list
     add :contents, :url => admin_pages_url
+    add :photo_galleries, :url => admin_photo_galleries_url
     add :settings, :url => edit_admin_current_site_url
   end
 

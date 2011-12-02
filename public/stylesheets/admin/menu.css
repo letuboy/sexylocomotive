@@ -397,3 +397,42 @@ body.settings #submenu > ul {
       background: #15527a;
       background: -moz-linear-gradient(0% 100% 90deg, #175b88, #13496c);
       background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13496c), to(#175b88)); }
+
+#menu li.photo-galleries a em {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  line-height: 17px;
+  background-position: 0 -48px;
+  top: 11px;
+  left: 0; }
+
+body.photo-galleries #menu li.photo-galleries {
+  z-index: 999; }
+  body.photo-galleries #menu li.photo-galleries a {
+    background-position: right -39px; }
+    body.photo-galleries #menu li.photo-galleries a span {
+      color: #fff;
+      text-shadow: none; }
+  body.photo-galleries #menu li.photo-galleries > span {
+    background-position: -40px -39px; }
+  body.photo-galleries #menu li.photo-galleries.first > span {
+    background-position: -18px 0px; }
+  body.photo-galleries #menu li.photo-galleries em {
+    position: relative;
+    width: 20px;
+    height: 16px;
+    line-height: 17px;
+    background-position: -20px -48px;
+    top: 11px;
+    left: 0; }
+body.photo-galleries #submenu > ul {
+  background-color: #2e9a7d; }
+  body.photo-galleries #submenu > ul > li > a {
+    background: #1c765d;
+    background: -moz-linear-gradient(0% 100% 90deg, #13604b, #258c70);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#258c70), to(#13604b)); }
+    body.photo-galleries #submenu > ul > li > a.on, body.photo-galleries #submenu > ul > li > a:active {
+      background: #176550;
+      background: -moz-linear-gradient(0% 100% 90deg, #166d55, #195e4b);
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#195e4b), to(#166d55)); }

@@ -1,0 +1,9 @@
+- content_for :head do
+  = include_javascripts :image_picker
+  = include_stylesheets :editable_elements, :fancybox
+
+- if can?(:manage, @photo_gallery)
+  = f.foldable_inputs :name => :information do
+    = f.input :title, :wrapper_html => { :class => 'highlighted' }
+		
+    = f.input :slug, :required => false, :hint => @photo_gallery.slug.blank? ? '&nbsp;' : photo_gallery_url(@photo_gallery), :input_html => { :'data-url' => get_path_admin_photo_galleries_url }

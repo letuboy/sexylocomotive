@@ -1,7 +1,7 @@
 module Admin
   class PagesController < BaseController
 
-    sections 'contents'
+		sections 'contents'
 
     respond_to :json, :only => [:update, :sort, :get_path]
 

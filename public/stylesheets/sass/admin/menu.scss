@@ -422,6 +422,10 @@
   @include icon(-32px, 14px, 13px, $enabled, 11px);
 }
 
+@mixin menu-photo-galleries-icon($enabled: false) {
+	@include icon(-48px, 20px, 16px, $enabled, 11px);
+}
+
 /* ___ section/color/icon associations ___ */
 
 #menu li.contents a em { @include menu-contents-icon; }
@@ -450,6 +454,16 @@ body.settings {
   #menu li.settings {
     @include menu-color($color);
     em { @include menu-settings-icon(true); }
+  }
+  #submenu { @include submenu-color($color); }
+}
+
+#menu li.photo-galleries a em { @include menu-photo-galleries-icon; }
+body.photo-galleries {
+	$color: green;
+	#menu li.photo-galleries {
+    @include menu-color($color);
+    em { @include menu-photo-galleries-icon(true); }
   }
   #submenu { @include submenu-color($color); }
 }

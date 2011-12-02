@@ -1,0 +1,10 @@
+- title link_to(@photo_gallery.title, '#', :rel => 'photo_gallery_title', :title => t('.ask_for_title'), :class => 'editable')
+
+- content_for :buttons do
+  = admin_button_tag :show, photo_gallery_url(@photo_gallery), :class => 'show'
+
+%p!= t('.help')
+
+= semantic_form_for @photo_gallery, :url => admin_photo_gallery_url(@page), :html => { :class => 'save-with-shortcut', :multipart => true } do |form|
+  = render 'form', :f => form
+  = render 'admin/shared/form_actions', :back_url => admin_photo_galleries_url, :button_label => :update

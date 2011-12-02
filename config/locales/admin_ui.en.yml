@@ -27,6 +27,7 @@ en:
         account: My account
         site: Site
         theme_assets: Theme files
+        photo_galleries: Photo Galleries
       footer:
         who_is_behind: "Service developed by %{development} and designed by <a href=\"http://www.sachagreif.com\">Sacha Greif</a>"
       form_actions:
@@ -121,6 +122,20 @@ en:
           day: 1 day
           week: 1 week
           month: 1 month
+          
+    photo_galleries:
+      index:
+        title: Listing Photo Galleries
+        new: new photo gallery
+      new:
+        title: New Photo Gallery
+        help: Please fill in the form below to create a photo gallery.
+      show:
+        title: "Photo Gallery: %{title}"
+      edit:
+        show: show
+        help: "The page title can be updated by clicking it. To apply your changes, click on the \"Save\" button."
+        ask_for_title: "Plase type the new photo gallery title"
 
     snippets:
       index:
