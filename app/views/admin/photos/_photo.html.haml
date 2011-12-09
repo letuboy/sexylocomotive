@@ -1,0 +1,6 @@
+%li{ :id => "item-#{photo.id}", "data-id" => photo.id}
+  = image_tag photo.source.url, :width => 282
+
+  %div.more
+    %span!= photo.title
+    = link_to image_tag('admin/list/icons/trash.png'), admin_photo_gallery_photo_url(photo.photo_gallery, photo), :class => 'remove', :confirm => t('admin.messages.confirm'), :method => :delete

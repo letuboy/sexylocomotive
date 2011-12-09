@@ -1,0 +1,7 @@
+- content_for :head do
+  = include_javascripts :image_picker
+  = include_stylesheets :editable_elements, :fancybox
+
+= f.foldable_inputs :name => :information do
+  = f.input :title, :wrapper_html => { :class => 'highlighted' }
+  = f.input :source

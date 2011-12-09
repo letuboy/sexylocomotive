@@ -14,4 +14,8 @@ class PhotoGallery
   referenced_in :site
   
   embeds_many :photos
+
+  def sorted_photos
+    photos.sort { |photo1, photo2| photo1.order <=> photo2.order }
+  end
 end

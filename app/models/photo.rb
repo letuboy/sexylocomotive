@@ -3,18 +3,21 @@ class Photo
 
   ## extensions ##
   include Extensions::Asset::Types
-  include Extensions::Asset::Vignette
 
   ## fields ##
   field :title, type: String
   field :desc, type: String
-  field :content_type, :type => String
-  field :width, type: Integer
-  field :height, type: Integer
-  field :size, type: Integer
-  field :position, type: Integer, default: 0
+  field :local_path
+  field :content_type
+  field :width, :type => Integer
+  field :height, :type => Integer
+  field :size, :type => Integer
+  field :folder, :default => nil
 
-  mount_uploader :source, AssetUploader
+  field :order, :type => Integer, :default => 0
 
-  embeds_in :photo_gallery
+  mount_uploader :source, PhotoUploader
+
+  embedded_in :photo_gallery
+
 end

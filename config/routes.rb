@@ -53,7 +53,12 @@ Rails.application.routes.draw do
 		
     resources :photo_galleries do
       get :get_path, :on => :collection
+      put :sort, :on => :member
+
+      resources :photos
     end
+
+    resources :photos
 
     # installation guide
     match '/installation' => 'installation#show', :defaults => { :step => 1 }, :as => :installation

@@ -1,1 +1,19 @@
 - title t('.title', :title => @photo_gallery.title)
+
+- content_for :head do
+  = include_javascripts :photos
+
+  = content_for :submenu do
+    = render :partial => 'admin/shared/menu/photo_gallery', :collection => current_site.photo_galleries
+
+- content_for :buttons do
+  = admin_button_tag :new_photo, new_admin_photo_gallery_photo_url(@photo_gallery), :class => 'new', :id => 'newphotoingallery'
+  = admin_button_tag :edit, edit_admin_photo_gallery_url(@photo_gallery), :class => 'edit', :id => 'editphotogallery'
+
+%ul.photo_gallery_photos{"data-id" => @photo_gallery.id}
+  = render @photo_gallery.sorted_photos
+
+%div.clear
+
+%button.button.light.save
+  %span Save

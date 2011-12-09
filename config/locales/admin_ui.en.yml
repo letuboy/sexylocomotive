@@ -137,6 +137,11 @@ en:
         help: "The page title can be updated by clicking it. To apply your changes, click on the \"Save\" button."
         ask_for_title: "Plase type the new photo gallery title"
 
+    photos:
+      new:
+        title: "New Photo in %{title}"
+
+
     snippets:
       index:
         title: Listing snippets

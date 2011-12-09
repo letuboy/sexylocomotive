@@ -1,9 +1,8 @@
 module Admin
   class PhotoGalleriesController < BaseController
-    include ActionView::Helpers::SanitizeHelper
-    include ActionView::Helpers::TextHelper
-		
     sections 'photo-galleries'
+
+    respond_to :json, :on => :sort
 		
     def index
       @photo_galleries = current_site.photo_galleries
@@ -11,6 +10,20 @@ module Admin
 		
     def new
       @photo_gallery = current_site.photo_galleries.build
+    end
+
+    def sort
+      @photo_gallery = PhotoGallery.find(params[:id])
+
+      params[:children].each_index do |key|
+        id = params[:children][key]
+
+        @photo_gallery.photos.find(id).order = key
+      end
+
+      @photo_gallery.save
+
+      render :json => {}
     end
   end
 end

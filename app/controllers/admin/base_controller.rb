@@ -11,7 +11,7 @@ module Admin
 
     before_filter :validate_site_membership
 
-    load_and_authorize_resource
+    #load_and_authorize_resource
 
     before_filter :set_locale
 
