@@ -20,4 +20,10 @@ class Photo
 
   embedded_in :photo_gallery
 
+  def to_liquid
+    puts "Converted photo to liquid.."
+
+    Locomotive::Liquid::Drops::Photo.new(self)
+  end
+
 end

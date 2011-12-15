@@ -18,4 +18,8 @@ class PhotoGallery
   def sorted_photos
     photos.sort { |photo1, photo2| photo1.order <=> photo2.order }
   end
+
+  def to_liquid
+    Locomotive::Liquid::Drops::PhotoGallery.new(self)
+  end
 end

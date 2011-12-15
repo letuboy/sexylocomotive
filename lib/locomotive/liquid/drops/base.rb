@@ -26,6 +26,7 @@ module Locomotive
               all << (block ? block.call(*attrs) : r.to_liquid)
               all
             end
+
           records.compact!
           records
         end
