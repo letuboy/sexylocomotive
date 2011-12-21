@@ -8,9 +8,9 @@ module Locomotive
         def initialize(source)
           super(source)
 
-          for gallery in self._source.photo_galleries
+          self._source.photo_galleries.each do |gallery|
             method_name = (gallery.title.downcase + "_gallery").to_sym
-
+            
             self.class.send :define_method, method_name do
               gallery.to_liquid
             end

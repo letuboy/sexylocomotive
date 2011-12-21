@@ -36,4 +36,4 @@ doc/bushido
 *.swp
 .idea/
 nbproject/
-
+public/sites
