@@ -1,6 +1,9 @@
 
 class PhotoUploader < CarrierWave::Uploader::Base
   include Locomotive::CarrierWave::Uploader::Asset
+  include CarrierWave::RMagick
+
+  process :resize_to_fit => [1024, 1024]
 
   def extension_white_list
     %w(jpg jpeg gif png)
