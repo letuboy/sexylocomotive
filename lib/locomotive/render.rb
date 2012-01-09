@@ -33,7 +33,7 @@ module Locomotive
         path.gsub!(/\.[a-zA-Z][a-zA-Z0-9]{2,}$/, '') # remove the page extension
         path.gsub!(/^\//, '') # remove the leading slash
 
-        path = 'index' if path.blank?
+        path = current_site.root_path if path.blank?
 
         if path != 'index'
           dirname = File.dirname(path).gsub(/^\.$/, '') # also look for templatized page path

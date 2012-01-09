@@ -11,6 +11,8 @@ class Site
   field :name
   field :robots_txt
 
+  field :root_path, :default => 'index'
+
   ## associations ##
   references_many :pages, :validate => false
   references_many :snippets, :dependent => :destroy, :validate => false

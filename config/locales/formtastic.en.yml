@@ -6,6 +6,7 @@ en:
       meta: SEO Metadata
       seo: SEO settings
       robots_txt: Robots.txt file
+      extras: Extras
       code: Code
       raw_template: Template
       credentials: Credentials

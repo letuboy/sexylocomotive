@@ -77,3 +77,7 @@
       = f.label :robots_txt
       %code{ :class => 'html' }
         = f.text_area :robots_txt, :class => 'small'
+  
+  = f.foldable_inputs :name => :extras do
+    = f.input :root_path
+
