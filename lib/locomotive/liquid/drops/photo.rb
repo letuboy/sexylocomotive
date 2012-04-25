@@ -3,13 +3,10 @@ module Locomotive
     module Drops
       class Photo < Base
         delegate :title, :to => '_source'
+        delegate :desc, :to => '_source'
 
         def url
           self._source.source.url
-        end
-
-        def test
-          "test"
         end
       end
     end

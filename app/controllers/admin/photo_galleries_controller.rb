@@ -5,7 +5,7 @@ module Admin
     respond_to :json, :on => :sort
 		
     def index
-      @photo_galleries = current_site.photo_galleries
+      @photo_galleries = current_site.photo_galleries.order_by([[:title, :asc]])
     end
 		
     def new

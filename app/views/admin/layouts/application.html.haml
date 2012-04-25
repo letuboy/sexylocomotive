@@ -9,14 +9,15 @@
         #header
           = render 'admin/shared/header'
           = render_cell 'admin/main_menu', :show
+          
+          - if content_for? :submenu
+            #submenu
+              %ul
+                = yield :submenu
 
-          #submenu
-            %ul
-              = yield :submenu
-
-            - if content_for? :actions
-              .action
-                = yield :actions
+              - if content_for? :actions
+                .action
+                  = yield :actions
 
         #content
           .inner
