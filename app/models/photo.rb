@@ -7,6 +7,7 @@ class Photo
   ## fields ##
   field :title, type: String
   field :desc, type: String
+  field :link, type: String
   field :local_path
   field :content_type
   field :width, :type => Integer

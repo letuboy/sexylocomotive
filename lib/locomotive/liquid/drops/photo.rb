@@ -4,6 +4,7 @@ module Locomotive
       class Photo < Base
         delegate :title, :to => '_source'
         delegate :desc, :to => '_source'
+        delegate :link, :to => '_source'
 
         def url
           self._source.source.url
