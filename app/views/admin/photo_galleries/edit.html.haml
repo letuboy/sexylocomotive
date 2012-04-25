@@ -5,6 +5,6 @@
 
 %p!= t('.help')
 
-= semantic_form_for @photo_gallery, :url => admin_photo_gallery_url(@page), :html => { :class => 'save-with-shortcut', :multipart => true } do |form|
+= semantic_form_for @photo_gallery, :url => admin_photo_gallery_url(@photo_gallery), :html => { :class => 'save-with-shortcut', :multipart => true } do |form|
   = render 'form', :f => form
   = render 'admin/shared/form_actions', :back_url => admin_photo_galleries_url, :button_label => :update

@@ -15,7 +15,12 @@ module Admin
 
     def build_photo
       @photo_gallery = PhotoGallery.find(params[:photo_gallery_id])
-      @photo = @photo_gallery.photos.build
+
+      if params[:id]
+        @photo = @photo_gallery.photos.find params[:id]
+      else
+        @photo = @photo_gallery.photos.build
+      end
     end
 
     def create
@@ -24,6 +29,14 @@ module Admin
       if @photo.save
         redirect_to admin_photo_gallery_url(@photo_gallery)
       end
+    end
+
+    def update
+      @photo.update_attributes params[:photo]
+      @photo.save
+      @photo_gallery.save
+      
+      redirect_to admin_photo_gallery_url(@photo_gallery)
     end
 
     def destroy

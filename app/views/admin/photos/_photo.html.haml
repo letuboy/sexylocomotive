@@ -3,4 +3,5 @@
 
   %div.more
     %span!= photo.title
+    = link_to image_tag('admin/icons/membership_edit.png'), edit_admin_photo_gallery_photo_url(photo.photo_gallery, photo), :class => 'remove'
     = link_to image_tag('admin/list/icons/trash.png'), admin_photo_gallery_photo_url(photo.photo_gallery, photo), :class => 'remove', :confirm => t('admin.messages.confirm'), :method => :delete
