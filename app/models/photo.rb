@@ -21,7 +21,7 @@ class Photo
 
   embedded_in :photo_gallery
 
-  attr_accessible :title, :desc, :link
+  attr_accessible :title, :desc, :link, :source
 
   def to_liquid
     puts "Converted photo to liquid.."
