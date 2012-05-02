@@ -407,6 +407,15 @@ body.settings #submenu > ul {
   top: 11px;
   left: 0; }
 
+#menu li.timeline a em {
+  position: relative;
+  width: 16px;
+  height: 12px;
+  line-height: 13px;
+  background-position: 0 -64px;
+  top: 10px;
+  left: 0; }
+
 body.photo-galleries #menu li.photo-galleries {
   z-index: 999; }
   body.photo-galleries #menu li.photo-galleries a {

@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   end
 
   resources :photo_galleries
+  resource :timeline
 
   # sitemap
   match '/sitemap.xml' => 'admin/sitemaps#show', :format => 'xml'

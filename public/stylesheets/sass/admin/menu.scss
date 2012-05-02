@@ -459,6 +459,8 @@ body.settings {
 }
 
 #menu li.photo-galleries a em { @include menu-photo-galleries-icon; }
+#menu li.timeline a em { @include menu-contents-icon; }
+
 body.photo-galleries {
 	$color: green;
 	#menu li.photo-galleries {

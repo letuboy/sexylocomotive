@@ -1,0 +1,2 @@
+module Admin::TimelineHelper
+end
