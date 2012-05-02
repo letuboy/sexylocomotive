@@ -1,6 +1,6 @@
 %li{ :id => "item-#{photo.id}", "data-id" => photo.id}
-  - if photo.source
-    = image_tag photo.source.url, :width => 282
+  - if photo.source.url
+    = image_tag photo.source.url.to_s, :width => 282
 
   %div.more
     %span!= photo.title
