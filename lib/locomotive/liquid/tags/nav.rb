@@ -76,8 +76,10 @@ module Locomotive
           icon = @options[:icon] ? '<span></span>' : ''
           label = %{#{icon if @options[:icon] != 'after' }#{page.title}#{icon if @options[:icon] == 'after' }}
 
+          target = if page.target then "target=\"" + page.target + "\"" else "" end
+
           output  = %{<li id="#{page.slug.dasherize}-link" class="link#{selected} #{css}">}
-          output << %{<a href="/#{page.fullpath}">#{label}</a>}
+          output << %{<a href="/#{page.fullpath}"#{target}>#{label}</a>}
           output << render_entry_children(page, depth.succ) if (depth.succ <= @options[:depth].to_i)
           output << %{</li>}
 

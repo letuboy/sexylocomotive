@@ -41,6 +41,10 @@ module Locomotive
           self._source.published?
         end
 
+        def target
+          self._source.target
+        end
+
       end
     end
   end
