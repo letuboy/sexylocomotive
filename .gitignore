@@ -17,6 +17,7 @@ public/javascripts/plugins
 public/images/plugins
 public/fonts
 public/sites_previous
+public/site
 pkg
 rails_3_gems
 doc/performance.txt
@@ -37,3 +38,4 @@ doc/bushido
 .idea/
 nbproject/
 public/sites
+.powenv

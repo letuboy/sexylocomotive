@@ -1,0 +1,6 @@
+- content_for :head do
+  = include_stylesheets :editable_elements, :fancybox
+
+- if can?(:manage, @category)
+  = f.foldable_inputs :name => :information do
+    = f.input :name, :wrapper_html => { :class => 'highlighted' }

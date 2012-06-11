@@ -128,6 +128,7 @@ en:
       index:
         title: Listing Photo Galleries
         new: new photo gallery
+        new_category: new category
       new:
         title: New Photo Gallery
         help: Please fill in the form below to create a photo gallery.
@@ -137,6 +138,13 @@ en:
         show: show
         help: "The page title can be updated by clicking it. To apply your changes, click on the \"Save\" button."
         ask_for_title: "Plase type the new photo gallery title"
+
+    categories:
+      new:
+        title: New Category
+        help: Please fill in the form below to create a category.
+      show:
+        title: Photo Galleries for %{category_name}
 
     photos:
       new:

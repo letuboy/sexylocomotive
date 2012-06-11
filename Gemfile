@@ -41,7 +41,6 @@ gem 'delayed_job', :git => "https://github.com/collectiveidea/delayed_job.git"
 gem 'delayed_job_mongoid'
 gem 'rubyzip'
 gem 'locomotive_jammit-s3', :require => 'jammit-s3'
-gem 'SystemTimer', :platforms => :ruby_18
 gem 'cells'
 gem 'sanitize'
 gem 'highline'

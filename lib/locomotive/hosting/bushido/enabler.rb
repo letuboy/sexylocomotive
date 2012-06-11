@@ -1,4 +1,3 @@
-require 'bushido'
 require 'locomotive/hosting/bushido/hooks'
 require 'locomotive/hosting/bushido/custom_domain'
 require 'locomotive/hosting/bushido/first_installation'

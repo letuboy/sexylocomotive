@@ -12,11 +12,24 @@ class PhotoGallery
   # -- references --
 
   referenced_in :site
+
+  belongs_to :category
   
   embeds_many :photos
 
   def sorted_photos
     photos.sort { |photo1, photo2| photo1.order <=> photo2.order }
+  end
+
+  def random_photos(n)
+    random_indexes = []
+    photo_count = photos.count
+
+    n.times do
+      random_indexes << rand(0..(photo_count - 1))
+    end
+
+    photos.to_a.values_at(*random_indexes)
   end
 
   def to_liquid

@@ -1,0 +1,7 @@
+%li{ :id => "item-#{category.id}" }
+  %em
+  %strong= link_to truncate(category.name, :length => 80), admin_category_url(category)
+
+  .more
+    %span!= t('.updated_at')
+    = l category.updated_at, :format => :short

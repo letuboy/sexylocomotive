@@ -20,6 +20,7 @@ class Site
   references_many :assets, :dependent => :destroy, :validate => false
   references_many :content_types, :dependent => :destroy, :validate => false
 	references_many :photo_galleries, :dependent => :destroy, :validate => false
+  references_many :categories, :dependent => :destroy, :validate => false
 
   embeds_many :memberships
 

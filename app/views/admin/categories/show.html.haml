@@ -1,19 +1,12 @@
-- title t('.title')
+- title t('.title', :category_name => @category.name)
 
 - if can? :create, PhotoGallery
   - content_for :buttons do
     = admin_button_tag :new_category, new_admin_category_url, class: "new", id: "new_category"
     = admin_button_tag :new, new_admin_photo_gallery_url, :class => 'new', :id => 'newphotogallery'
 
-- if @categories.empty? && @photo_galleries.empty?
+- if @photo_galleries.empty?
   %p.no-items!= t('.no_items', :url => new_admin_photo_gallery_url)
 - else
-
-  %h2 Categories
   %ul#photo-galleries-list
-    = render @categories
-
-  - if !@photo_galleries.empty?
-    %h2 Uncategorized Photo Galleries
-    %ul#photo-galleries-list
-      = render @photo_galleries
+    = render @photo_galleries

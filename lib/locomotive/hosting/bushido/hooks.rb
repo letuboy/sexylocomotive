@@ -1,4 +1,3 @@
-require 'bushido'
 
 module Locomotive
   module Hosting
