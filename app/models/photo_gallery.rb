@@ -26,10 +26,16 @@ class PhotoGallery
     photo_count = photos.count
 
     n.times do
-      index = rand((photo_count - 1))
+      index = rand((photo_count))
 
-      until !random_indexes.include? index
-        index = rand((photo_count - 1))
+      puts random_indexes.inspect
+      if random_indexes.include? index
+        puts index
+        puts random_indexes.include? index
+        puts photo_count
+        while random_indexes.include?(index)
+          index = rand((photo_count))
+        end
       end
 
       random_indexes << index
