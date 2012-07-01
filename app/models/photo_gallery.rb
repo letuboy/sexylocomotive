@@ -26,7 +26,13 @@ class PhotoGallery
     photo_count = photos.count
 
     n.times do
-      random_indexes << rand((photo_count - 1))
+      index = rand((photo_count - 1))
+
+      until !random_indexes.include? index
+        index = rand((photo_count - 1))
+      end
+
+      random_indexes << index
     end
 
     photos.to_a.values_at(*random_indexes)
